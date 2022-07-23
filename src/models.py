@@ -48,7 +48,7 @@ class Comment(Base):
     id = Column(Integer, primary_key=True)
     comment_text = Column(String)
     author = relationship(User)
-    author_id = Column(Integer, ForeignKey('author.id'), nullable=True)
+    author_id = Column(Integer, ForeignKey('user.id'), nullable=True)
     post = relationship(Post)
     post_id = Column(Integer, ForeignKey('post.id'), nullable=True)
 
